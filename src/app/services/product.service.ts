@@ -13,7 +13,7 @@ export class ProductService {
   getCatalog() {
     return this.http.get<Category[]>('/api/Catalog'); // From Project C
   }
-
+ 
   getCategoryById(id: number): Observable<Category> {
     return new Observable<Category>((subscriber) => {
       // Use getCatalog instead of direct API call to avoid differences
