@@ -11,7 +11,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getCatalog() {
-    return this.http.get<Category[]>(`/api/Catalog`); // From Project C
+    return this.http.get<Category[]>('/api/Catalog'); // From Project C
   }
 
   getCategoryById(id: number): Observable<Category> {

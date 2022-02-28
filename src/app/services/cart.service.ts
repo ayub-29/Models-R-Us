@@ -24,5 +24,5 @@ export class CartService {
   checkout(info: Shipping){
     return this.http.post<CartItem[]>('/api/cart/checkout', info);
   }
-  
+   
 }

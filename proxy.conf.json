@@ -1,7 +1,8 @@
 {
   "/api/*": {
-    "target": "http://localhost:3000",
+    "target": "http://models-r-us.herokuapp.com",
     "secure": false,
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "changeOrigin": true
   }
 }
