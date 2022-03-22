@@ -3,6 +3,7 @@
     "target": "http://models-r-us.herokuapp.com",
     "secure": false,
     "logLevel": "debug",
-    "changeOrigin": true
+    "changeOrigin": true,
+    "pathRewrite": {"^/api" : "http://models-r-us.herokuapp.com/api"}
   }
 }

@@ -76,7 +76,7 @@ export class CartTableComponent implements OnInit {
     for(let i = 0; i < this.items.length; i++){
       this.total = this.total + (this.items[i].qty * this.items[i].product!.cost);
     }
-  }
+  } 
   
   qtyAsNumber(item: CartItem) {
     item.qty = +item.qty;
