@@ -18,11 +18,11 @@ export class CartService {
 
   getCartItem() { return this.http.get<CartItem[]>('/api/cart'); }
   updateCart(item: CartItem) {
-    return this.http.post<CartItem[]>('/api/cart/update', item);
+    return this.http.post<CartItem[]>('http://models-r-us.herokuapp.com/api/cart/update', item);
   }
 
   checkout(info: Shipping){
-    return this.http.post<CartItem[]>('/api/cart/checkout', info);
+    return this.http.post<CartItem[]>('http://models-r-us.herokuapp.com/api/cart/checkout', info);
   }
    
 }

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-
 import { Product, Category } from '../models/product.model';
 
 @Injectable({
@@ -11,7 +10,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getCatalog() {
-    return this.http.get<Category[]>('/api/Catalog'); // From Project C
+    return this.http.get<Category[]>('http://models-r-us.herokuapp.com/api/catalog'); // From Project C
   }
  
   getCategoryById(id: number): Observable<Category> {
@@ -31,10 +30,10 @@ export class ProductService {
   }
 
   getProductById(id: string) {
-    return this.http.get<Product>(`/api/products/${id}`);
+    return this.http.get<Product>(`http://models-r-us.herokuapp.com/api/products/${id}`);
   }
 
   getProductsByCategory(catId: number) {
-    return this.http.get<Product[]>(`/api/products/category/${catId}`);
+    return this.http.get<Product[]>(`http://models-r-us.herokuapp.com/api/products/category/${catId}`);
   }
 }
